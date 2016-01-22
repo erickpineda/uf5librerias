@@ -1,0 +1,1227 @@
+<?xml version="1.0" ?>
+<golejadors esport="futbol" lliga="1a divisió" data="02/04/2014">
+    <jugador posicio="1">
+        <nom>Telmo Zarra</nom>
+        <gols>251</gols>
+        <partits>277</partits>
+        <mitjana>0.91</mitjana>
+        <equips>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>251</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="2">
+        <nom>Lionel Messi</nom>
+        <gols>238</gols>
+        <partits>270</partits>
+        <mitjana>0.88</mitjana>
+        <equips>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>238</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="3">
+        <nom>Hugo Sánchez</nom>
+        <gols>234</gols>
+        <partits>347</partits>
+        <mitjana>0.67</mitjana>
+        <equips>
+            <equip>
+                <nom>Club Atlético de Madrid</nom>
+                <gols>54</gols>
+            </equip>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>164</gols>
+            </equip>
+            <equip>
+                <nom>Rayo Vallecano</nom>
+                <gols>16</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="4">
+        <nom>Raúl González</nom>
+        <gols>228</gols>
+        <partits>550</partits>
+        <mitjana>0.41</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>228</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="5">
+        <nom>Alfredo Di Stéfano</nom>
+        <gols>227</gols>
+        <partits>329</partits>
+        <mitjana>0.69</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>216</gols>
+            </equip>
+            <equip>
+                <nom>R. C. D. Español</nom>
+                <gols>11</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="6">
+        <nom>César Rodríguez</nom>
+        <gols>223</gols>
+        <partits>353</partits>
+        <mitjana>0.63</mitjana>
+        <equips>
+            <equip>
+                <nom>Granada C. F.</nom>
+                <gols>23</gols>
+            </equip>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>192</gols>
+            </equip>
+            <equip>
+                <nom>Cultural y Deportiva Leonesa</nom>
+                <gols>3</gols>
+            </equip>
+            <equip>
+                <nom>Elche C. F.</nom>
+                <gols>5</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="7">
+        <nom>Quini</nom>
+        <gols>219</gols>
+        <partits>448</partits>
+        <mitjana>0.49</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Sporting de Gijón</nom>
+                <gols>165</gols>
+            </equip>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>54</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="8">
+        <nom>Pahiño</nom>
+        <gols>210</gols>
+        <partits>278</partits>
+        <mitjana>0.76</mitjana>
+        <equips>
+            <equip>
+                <nom>R. C. Celta de Vigo</nom>
+                <gols>56</gols>
+            </equip>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>108</gols>
+            </equip>
+            <equip>
+                <nom>R. C. Deportivo de La Coruña</nom>
+                <gols>46</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="9">
+        <nom>Mundo</nom>
+        <gols>195</gols>
+        <partits>231</partits>
+        <mitjana>0.84</mitjana>
+        <equips>
+            <equip>
+                <nom>Valencia C. F.</nom>
+                <gols>186</gols>
+            </equip>
+            <equip>
+                <nom>C. D. Alcoyano</nom>
+                <gols>9</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="10">
+        <nom>Santillana</nom>
+        <gols>186</gols>
+        <partits>461</partits>
+        <mitjana>0.40</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>186</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="11">
+        <nom>David Villa</nom>
+        <gols>185</gols>
+        <partits>345</partits>
+        <mitjana>0.54</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Zaragoza</nom>
+                <gols>32</gols>
+            </equip>
+            <equip>
+                <nom>Valencia C. F.</nom>
+                <gols>107</gols>
+            </equip>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>33</gols>
+            </equip>
+            <equip>
+                <nom>Club Atlético de Madrid</nom>
+                <gols>13</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="12">
+        <nom>Juan Arza</nom>
+        <gols>182</gols>
+        <partits>349</partits>
+        <mitjana>0.52</mitjana>
+        <equips>
+            <equip>
+                <nom>Sevilla F. C.</nom>
+                <gols>182</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="13">
+        <nom>Guillermo Gorostiza</nom>
+        <gols>178</gols>
+        <partits>256</partits>
+        <mitjana>0.70</mitjana>
+        <equips>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>106</gols>
+            </equip>
+            <equip>
+                <nom>Valencia C. F.</nom>
+                <gols>72</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="14">
+        <nom>Cristiano Ronaldo</nom>
+        <gols>174</gols>
+        <partits>162</partits>
+        <mitjana>1.07</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>174</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="15">
+        <nom>Samuel Eto'o</nom>
+        <gols>162</gols>
+        <partits>280</partits>
+        <mitjana>0.58</mitjana>
+        <equips>
+            <equip>
+                <nom>R. C. D. Mallorca</nom>
+                <gols>54</gols>
+            </equip>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>108</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="16">
+        <nom>Luis Aragonés</nom>
+        <gols>160</gols>
+        <partits>360</partits>
+        <mitjana>0.44</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Oviedo</nom>
+                <gols>4</gols>
+            </equip>
+            <equip>
+                <nom>Real Betis Balompié</nom>
+                <gols>33</gols>
+            </equip>
+            <equip>
+                <nom>Club Atlético de Madrid</nom>
+                <gols>123</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="17">
+        <nom>Ferenc Puskás</nom>
+        <gols>156</gols>
+        <partits>180</partits>
+        <mitjana>0.87</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>156</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="18">
+        <nom>Julio Salinas</nom>
+        <gols>152</gols>
+        <partits>417</partits>
+        <mitjana>0.36</mitjana>
+        <equips>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>13</gols>
+            </equip>
+            <equip>
+                <nom>Club Atlético de Madrid</nom>
+                <gols>31</gols>
+            </equip>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>60</gols>
+            </equip>
+            <equip>
+                <nom>R. C. Deportivo de La Coruña</nom>
+                <gols>12</gols>
+            </equip>
+            <equip>
+                <nom>Real Sporting de Gijón</nom>
+                <gols>24</gols>
+            </equip>
+            <equip>
+                <nom>Deportivo Alavés</nom>
+                <gols>12</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="19">
+        <nom>Adrián Escudero</nom>
+        <gols>150</gols>
+        <partits>287</partits>
+        <mitjana>0.52</mitjana>
+        <equips>
+            <equip>
+                <nom>Club Atlético de Madrid</nom>
+                <gols>150</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="20">
+        <nom>Dani Ruiz Bazán</nom>
+        <gols>147</gols>
+        <partits>303</partits>
+        <mitjana>0.49</mitjana>
+        <equips>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>147</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="21">
+        <nom>Raúl Tamudo</nom>
+        <gols>146</gols>
+        <partits>407</partits>
+        <mitjana>0.36</mitjana>
+        <equips>
+            <equip>
+                <nom>R. C. D. Español</nom>
+                <gols>129</gols>
+            </equip>
+            <equip>
+                <nom>Real Sociedad</nom>
+                <gols>7</gols>
+            </equip>
+            <equip>
+                <nom>Rayo Vallecano</nom>
+                <gols>10</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="22">
+        <nom>Silvestre Igoa</nom>
+        <gols>141</gols>
+        <partits>284</partits>
+        <mitjana>0.50</mitjana>
+        <equips>
+            <equip>
+                <nom>Valencia C. F.</nom>
+                <gols>81</gols>
+            </equip>
+            <equip>
+                <nom>Real Sociedad</nom>
+                <gols>60</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="23">
+        <nom>Manuel Badenes</nom>
+        <gols>139</gols>
+        <partits>200</partits>
+        <mitjana>0.70</mitjana>
+        <equips>
+            <equip>
+                <nom>C. D. Castellón</nom>
+                <gols>4</gols>
+            </equip>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>6</gols>
+            </equip>
+            <equip>
+                <nom>Valencia C. F.</nom>
+                <gols>90</gols>
+            </equip>
+            <equip>
+                <nom>Real Valladolid C. F.</nom>
+                <gols>35</gols>
+            </equip>
+            <equip>
+                <nom>Real Sporting de Gijón</nom>
+                <gols>4</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="24">
+        <nom>Juan Araujo</nom>
+        <gols>139</gols>
+        <partits>207</partits>
+        <mitjana>0.67</mitjana>
+        <equips>
+            <equip>
+                <nom>Sevilla F. C.</nom>
+                <gols>139</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="25">
+        <nom>José Mari Bakero</nom>
+        <gols>139</gols>
+        <partits>483</partits>
+        <mitjana>0.29</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Sociedad</nom>
+                <gols>67</gols>
+            </equip>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>72</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="26">
+        <nom>Ladislao Kubala</nom>
+        <gols>138</gols>
+        <partits>215</partits>
+        <mitjana>0.64</mitjana>
+        <equips>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>131</gols>
+            </equip>
+            <equip>
+                <nom>R. C. D. Español</nom>
+                <gols>7</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="27">
+        <nom>José Luis Panizo</nom>
+        <gols>136</gols>
+        <partits>326</partits>
+        <mitjana>0.42</mitjana>
+        <equips>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>136</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="28">
+        <nom>Jesús María Satrústegui</nom>
+        <gols>133</gols>
+        <partits>297</partits>
+        <mitjana>0.45</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Sociedad</nom>
+                <gols>133</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="29">
+        <nom>Joaquín Murillo</nom>
+        <gols>132</gols>
+        <partits>226</partits>
+        <mitjana>0.58</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Valladolid C. F.</nom>
+                <gols>44</gols>
+            </equip>
+            <equip>
+                <nom>Real Zaragoza</nom>
+                <gols>88</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="30">
+        <nom>Ismael Urzaiz</nom>
+        <gols>131</gols>
+        <partits>445</partits>
+        <mitjana>0.29</mitjana>
+        <equips>
+            <equip>
+                <nom>Albacete Balompié</nom>
+                <gols>1</gols>
+            </equip>
+            <equip>
+                <nom>R. C. Celta de Vigo</nom>
+                <gols>1</gols>
+            </equip>
+            <equip>
+                <nom>Rayo Vallecano de Madrid</nom>
+                <gols>1</gols>
+            </equip>
+            <equip>
+                <nom>R. C. D. Español</nom>
+                <gols>13</gols>
+            </equip>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>115</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="31">
+        <nom>Fernando Ansola</nom>
+        <gols>130</gols>
+        <partits>323</partits>
+        <mitjana>0.40</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Oviedo</nom>
+                <gols>8</gols>
+            </equip>
+            <equip>
+                <nom>Real Betis Balompié</nom>
+                <gols>54</gols>
+            </equip>
+            <equip>
+                <nom>Valencia C. F.</nom>
+                <gols>34</gols>
+            </equip>
+            <equip>
+                <nom>Real Sociedad</nom>
+                <gols>34</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="32">
+        <nom>Luboslav Penev</nom>
+        <gols>129</gols>
+        <partits>305</partits>
+        <mitjana>0.42</mitjana>
+        <equips>
+            <equip>
+                <nom>Valencia C. F.</nom>
+                <gols>67</gols>
+            </equip>
+            <equip>
+                <nom>Club Atlético de Madrid</nom>
+                <gols>16</gols>
+            </equip>
+            <equip>
+                <nom>S. D. Compostela</nom>
+                <gols>32</gols>
+            </equip>
+            <equip>
+                <nom>R. C. Celta de Vigo</nom>
+                <gols>14</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="33">
+        <nom>Diego Forlán</nom>
+        <gols>128</gols>
+        <partits>240</partits>
+        <mitjana>0.53</mitjana>
+        <equips>
+            <equip>
+                <nom>Villarreal C. F.</nom>
+                <gols>54</gols>
+            </equip>
+            <equip>
+                <nom>Club Atlético de Madrid</nom>
+                <gols>74</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="34">
+        <nom>Paco Gento</nom>
+        <gols>128</gols>
+        <partits>437</partits>
+        <mitjana>0.29</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Racing Club de Santander</nom>
+                <gols>2</gols>
+            </equip>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>126</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="35">
+        <nom>Paco Campos</nom>
+        <gols>127</gols>
+        <partits>204</partits>
+        <mitjana>0.62</mitjana>
+        <equips>
+            <equip>
+                <nom>Club Atlético de Madrid</nom>
+                <gols>120</gols>
+            </equip>
+            <equip>
+                <nom>Real Sporting de Gijón</nom>
+                <gols>7</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="36">
+        <nom>Eneko Arieta</nom>
+        <gols>127</gols>
+        <partits>243</partits>
+        <mitjana>0.52</mitjana>
+        <equips>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>127</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="37">
+        <nom>Mario Alberto Kempes</nom>
+        <gols>126</gols>
+        <partits>222</partits>
+        <mitjana>0.57</mitjana>
+        <equips>
+            <equip>
+                <nom>Valencia C. F.</nom>
+                <gols>116</gols>
+            </equip>
+            <equip>
+                <nom>Hércules C. F.</nom>
+                <gols>10</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="38">
+        <nom>Herrerita</nom>
+        <gols>126</gols>
+        <partits>230</partits>
+        <mitjana>0.55</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Oviedo</nom>
+                <gols>117</gols>
+            </equip>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>9</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="39">
+        <nom>Epi</nom>
+        <gols>124</gols>
+        <partits>334</partits>
+        <mitjana>0.37</mitjana>
+        <equips>
+            <equip>
+                <nom>Valencia C. F.</nom>
+                <gols>78</gols>
+            </equip>
+            <equip>
+                <nom>Real Sociedad</nom>
+                <gols>46</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="40">
+        <nom>Fernando Morientes</nom>
+        <gols>124</gols>
+        <partits>337</partits>
+        <mitjana>0.37</mitjana>
+        <equips>
+            <equip>
+                <nom>Albacete Balompié</nom>
+                <gols>5</gols>
+            </equip>
+            <equip>
+                <nom>Real Zaragoza</nom>
+                <gols>28</gols>
+            </equip>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>72</gols>
+            </equip>
+            <equip>
+                <nom>Valencia C. F.</nom>
+                <gols>19</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="41">
+        <nom>Emilio Butragueño</nom>
+        <gols>123</gols>
+        <partits>341</partits>
+        <mitjana>0.36</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>123</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="42">
+        <nom>Pirri</nom>
+        <gols>123</gols>
+        <partits>417</partits>
+        <mitjana>0.29</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>123</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="43">
+        <nom>Piru Gaínza</nom>
+        <gols>120</gols>
+        <partits>381</partits>
+        <mitjana>0.31</mitjana>
+        <equips>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>120</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="44">
+        <nom>Amancio Amaro</nom>
+        <gols>119</gols>
+        <partits>344</partits>
+        <mitjana>0.35</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>119</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="45">
+        <nom>Ronaldo</nom>
+        <gols>117</gols>
+        <partits>164</partits>
+        <mitjana>0.71</mitjana>
+        <equips>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>34</gols>
+            </equip>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>83</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="46">
+        <nom>Rafael Marañón</nom>
+        <gols>116</gols>
+        <partits>308</partits>
+        <mitjana>0.38</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>5</gols>
+            </equip>
+            <equip>
+                <nom>R. C. D. Español</nom>
+                <gols>111</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="47">
+        <nom>Waldo Machado</nom>
+        <gols>115</gols>
+        <partits>216</partits>
+        <mitjana>0.53</mitjana>
+        <equips>
+            <equip>
+                <nom>Valencia C. F.</nom>
+                <gols>115</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="48">
+        <nom>José Juncosa</nom>
+        <gols>114</gols>
+        <partits>232</partits>
+        <mitjana>0.49</mitjana>
+        <equips>
+            <equip>
+                <nom>R. C. D. Español</nom>
+                <gols>34</gols>
+            </equip>
+            <equip>
+                <nom>Club Atlético de Madrid</nom>
+                <gols>80</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="49">
+        <nom>Davor Šuker</nom>
+        <gols>114</gols>
+        <partits>239</partits>
+        <mitjana>0.48</mitjana>
+        <equips>
+            <equip>
+                <nom>Sevilla F. C.</nom>
+                <gols>76</gols>
+            </equip>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>38</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="50">
+        <nom>Pedro Uralde</nom>
+        <gols>112</gols>
+        <partits>339</partits>
+        <mitjana>0.33</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Sociedad</nom>
+                <gols>62</gols>
+            </equip>
+            <equip>
+                <nom>Club Atlético de Madrid</nom>
+                <gols>8</gols>
+            </equip>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>34</gols>
+            </equip>
+            <equip>
+                <nom>R. C. Deportivo de La Coruña</nom>
+                <gols>8</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="51">
+        <nom>Roberto López Ufarte</nom>
+        <gols>112</gols>
+        <partits>418</partits>
+        <mitjana>0.27</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Sociedad</nom>
+                <gols>101</gols>
+            </equip>
+            <equip>
+                <nom>Club Atlético de Madrid</nom>
+                <gols>8</gols>
+            </equip>
+            <equip>
+                <nom>Real Betis Balompié</nom>
+                <gols>3</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="52">
+        <nom>Carlos Muñoz</nom>
+        <gols>111</gols>
+        <partits>314</partits>
+        <mitjana>0.35</mitjana>
+        <equips>
+            <equip>
+                <nom>Elche C. F.</nom>
+                <gols>5</gols>
+            </equip>
+            <equip>
+                <nom>Hércules C. F.</nom>
+                <gols>5</gols>
+            </equip>
+            <equip>
+                <nom>Real Murcia C. F.</nom>
+                <gols>4</gols>
+            </equip>
+            <equip>
+                <nom>Club Atlético de Madrid</nom>
+                <gols>4</gols>
+            </equip>
+            <equip>
+                <nom>Real Oviedo</nom>
+                <gols>93</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="53">
+        <nom>José Ángel Ziganda</nom>
+        <gols>111</gols>
+        <partits>381</partits>
+        <mitjana>0.29</mitjana>
+        <equips>
+            <equip>
+                <nom>C. A. Osasuna</nom>
+                <gols>35</gols>
+            </equip>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>76</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="54">
+        <nom>José Eulogio Gárate</nom>
+        <gols>109</gols>
+        <partits>241</partits>
+        <mitjana>0.45</mitjana>
+        <equips>
+            <equip>
+                <nom>Club Atlético de Madrid</nom>
+                <gols>109</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="55">
+        <nom>Fernando Gómez</nom>
+        <gols>109</gols>
+        <partits>421</partits>
+        <mitjana>0.26</mitjana>
+        <equips>
+            <equip>
+                <nom>Valencia C. F.</nom>
+                <gols>109</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="56">
+        <nom>Bata</nom>
+        <gols>108</gols>
+        <partits>118</partits>
+        <mitjana>0.92</mitjana>
+        <equips>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>108</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="57">
+        <nom>José Luis Artetxe</nom>
+        <gols>108</gols>
+        <partits>276</partits>
+        <mitjana>0.39</mitjana>
+        <equips>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>108</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="58">
+        <nom>Gonzalo Higuaín</nom>
+        <gols>107</gols>
+        <partits>190</partits>
+        <mitjana>0.56</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>107</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="59">
+        <nom>Rivaldo</nom>
+        <gols>107</gols>
+        <partits>198</partits>
+        <mitjana>0.54</mitjana>
+        <equips>
+            <equip>
+                <nom>R. C. Deportivo de La Coruña</nom>
+                <gols>21</gols>
+            </equip>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>86</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="60">
+        <nom>Pichi Alonso</nom>
+        <gols>107</gols>
+        <partits>261</partits>
+        <mitjana>0.41</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Zaragoza</nom>
+                <gols>70</gols>
+            </equip>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>12</gols>
+            </equip>
+            <equip>
+                <nom>R. C. D. Español</nom>
+                <gols>25</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="61">
+        <nom>Mariano Martín</nom>
+        <gols>106</gols>
+        <partits>130</partits>
+        <mitjana>0.82</mitjana>
+        <equips>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>98</gols>
+            </equip>
+            <equip>
+                <nom>Club Gimnàstic de Tarragona</nom>
+                <gols>8</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="62">
+        <nom>Hermidita</nom>
+        <gols>105</gols>
+        <partits>159</partits>
+        <mitjana>0.66</mitjana>
+        <equips>
+            <equip>
+                <nom>R. C. Celta de Vigo</nom>
+                <gols>105</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="63">
+        <nom>Meho Kodro</nom>
+        <gols>105</gols>
+        <partits>263</partits>
+        <mitjana>0.40</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Sociedad</nom>
+                <gols>73</gols>
+            </equip>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>9</gols>
+            </equip>
+            <equip>
+                <nom>C. D. Tenerife</nom>
+                <gols>18</gols>
+            </equip>
+            <equip>
+                <nom>Deportivo Alavés</nom>
+                <gols>5</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="64">
+        <nom>Fernando Hierro</nom>
+        <gols>105</gols>
+        <partits>497</partits>
+        <mitjana>0.21</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Valladolid C. F.</nom>
+                <gols>3</gols>
+            </equip>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>102</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="65">
+        <nom>Isidro Lángara</nom>
+        <gols>104</gols>
+        <partits>90</partits>
+        <mitjana>1.16</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Oviedo</nom>
+                <gols>104</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="66">
+        <nom>Cayetano Ré</nom>
+        <gols>104</gols>
+        <partits>265</partits>
+        <mitjana>0.39</mitjana>
+        <equips>
+            <equip>
+                <nom>Elche C. F.</nom>
+                <gols>25</gols>
+            </equip>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>56</gols>
+            </equip>
+            <equip>
+                <nom>R. C. D. Español</nom>
+                <gols>23</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="67">
+        <nom>Álvaro Negredo</nom>
+        <gols>102</gols>
+        <partits>209</partits>
+        <mitjana>0.48</mitjana>
+        <equips>
+            <equip>
+                <nom>U. D. Almería</nom>
+                <gols>32</gols>
+            </equip>
+            <equip>
+                <nom>Sevilla F. C.</nom>
+                <gols>70</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="68">
+        <nom>Luis Enrique Martínez</nom>
+        <gols>102</gols>
+        <partits>400</partits>
+        <mitjana>0.26</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Sporting de Gijón</nom>
+                <gols>14</gols>
+            </equip>
+            <equip>
+                <nom>Real Madrid C. F.</nom>
+                <gols>15</gols>
+            </equip>
+            <equip>
+                <nom>F. C. Barcelona</nom>
+                <gols>73</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="69">
+        <nom>Victorio Unamuno</nom>
+        <gols>101</gols>
+        <partits>144</partits>
+        <mitjana>0.70</mitjana>
+        <equips>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>72</gols>
+            </equip>
+            <equip>
+                <nom>Real Betis Balompié</nom>
+                <gols>29</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="70">
+        <nom>Roberto Soldado</nom>
+        <gols>101</gols>
+        <partits>207</partits>
+        <mitjana>0.49</mitjana>
+        <equips>
+            <equip>
+                <nom>Real Madrid C. F</nom>
+                <gols>2</gols>
+            </equip>
+            <equip>
+                <nom>C. A. Osasun</nom>
+                <gols>11</gols>
+            </equip>
+            <equip>
+                <nom>Getafe C. F</nom>
+                <gols>29</gols>
+            </equip>
+            <equip>
+                <nom>Valencia C. F.</nom>
+                <gols>59</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="71">
+        <nom>Manu Sarabia</nom>
+        <gols>101</gols>
+        <partits>363</partits>
+        <mitjana>0.28</mitjana>
+        <equips>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>83</gols>
+            </equip>
+            <equip>
+                <nom>C. D. Logroñés</nom>
+                <gols>18</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="72">
+        <nom>Julen Guerrero</nom>
+        <gols>101</gols>
+        <partits>372</partits>
+        <mitjana>0.27</mitjana>
+        <equips>
+            <equip>
+                <nom>Athletic Club</nom>
+                <gols>101</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="73">
+        <nom>Campanal I</nom>
+        <gols>100</gols>
+        <partits>157</partits>
+        <mitjana>0.64</mitjana>
+        <equips>
+            <equip>
+                <nom>Sevilla F. C.</nom>
+                <gols>100</gols>
+            </equip>
+        </equips>
+    </jugador>
+    <jugador posicio="74">
+        <nom>Roy Makaay</nom>
+        <gols>100</gols>
+        <partits>205</partits>
+        <mitjana>0.49</mitjana>
+        <equips>
+            <equip>
+                <nom>C. D. Tenerife</nom>
+                <gols>21</gols>
+            </equip>
+            <equip>
+                <nom>R. C. Deportivo de La Coruña</nom>
+                <gols>79</gols>
+            </equip>
+        </equips>
+    </jugador>
+</golejadors>

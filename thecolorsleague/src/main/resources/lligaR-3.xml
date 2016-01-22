@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lliga edicio="3">
+    <descripcio>
+        <nom>Lliga dels Rovellons</nom>
+        <edicio>3</edicio>
+        <llista-equips>
+            <club>
+                <nom>Verds</nom>
+                <president>Bill Finestres</president>
+            </club>
+            <club>
+                <nom>Vermells</nom>
+                <president>Alfred Soques</president>
+            </club>
+            <club>
+                <nom>Blaus</nom>
+                <president>Gori Rabassa</president>
+            </club>
+            <club>
+                <nom>Blancs</nom>
+                <president>Manolo Carro</president>
+            </club>
+        </llista-equips>
+    </descripcio>
+    
+    <jornada num="1">
+        <partit num="1">
+            <dia>23-12-2012</dia>
+            <equip juga="local">
+                <nom>Verds</nom>
+                <resultat>2</resultat>
+                <gols>
+                    <jugador minut="22">Musti</jugador>
+                    <jugador minut="52">Musti</jugador>
+                </gols>                
+            </equip>
+            
+            <equip juga="visitant">
+                <nom>Vermells</nom>
+                <resultat>0</resultat>
+                <gols></gols>
+            </equip>
+        </partit>
+        
+        <partit num="2">
+            <dia>23-12-2012</dia>
+            <equip juga="local">
+                <nom>Blaus</nom>
+                <resultat>1</resultat>
+                <gols>
+                    <jugador minut="30">Pinxito</jugador>                    
+                </gols> 
+            </equip>
+            <equip juga="visitant">
+                <nom>Blancs</nom>
+                <resultat>1</resultat>
+                <gols>
+                    <jugador minut="12">Bilis</jugador>                    
+                </gols> 
+            </equip>
+        </partit>
+    </jornada>
+    
+    <jornada num="2">
+        
+        <partit num="1">
+            <dia>30-12-2012</dia>
+
+            <equip juga="local">
+                <nom>Blaus</nom>
+                <resultat>2</resultat>
+                <gols>
+                    <jugador minut="12">Pinxito</jugador>
+                    <jugador minut="55">Moreno</jugador>                    
+                </gols> 
+            </equip>
+
+            <equip juga="visitant">
+                <nom>Verds</nom>
+                <resultat>2</resultat>
+                <gols>
+                    <jugador minut="9">Musti</jugador>
+                    <jugador minut="90">Musti</jugador>                    
+                </gols> 
+            </equip>
+        </partit>
+        
+        <partit num="2">
+            <dia>31-12-2012</dia>
+
+            <equip juga="local">
+                <nom>Blancs</nom>
+                <resultat>1</resultat>
+                <gols>
+                    <jugador minut="1">Piti</jugador>                    
+                </gols> 
+            </equip>
+
+            <equip juga="visitant">
+                <nom>Vermells</nom>
+                <resultat>2</resultat>
+                <gols>
+                    <jugador minut="51">Filomenu</jugador>
+                    <jugador minut="82">Filomenu</jugador>                                        
+                </gols> 
+            </equip>
+        </partit>
+        
+    </jornada>
+    
+    <jornada num="3">
+
+        <partit num="1">
+            <dia>07-01-2013</dia>
+            
+            <equip juga="local">
+                <nom>Verds</nom>
+                <resultat>1</resultat>
+                <gols>
+                    <jugador minut="10">Musti</jugador>                                        
+                </gols>                 
+            </equip>
+            
+            <equip juga="visitant">
+                <nom>Blancs</nom>
+                <resultat>2</resultat>
+                <gols>
+                    <jugador minut="29">Bilis</jugador>
+                    <jugador minut="61">Borni</jugador>                                        
+                </gols>                
+            </equip>            
+        </partit>
+        
+        <partit num="2">
+            <dia>07-01-2013</dia>
+            
+            <equip juga="local">
+                <nom>Blaus</nom>
+                <resultat>1</resultat>
+                <gols>
+                    <jugador minut="49">Toni Moco</jugador>                                        
+                </gols> 
+            </equip>
+            
+            <equip juga="visitant">
+                <nom>Vermells</nom>
+                <resultat>1</resultat>
+                <gols>
+                    <jugador minut="72">Federicu</jugador>                                        
+                </gols> 
+            </equip>            
+        </partit>
+        
+    </jornada>
+    
+    <jornada num="4">
+        
+        <partit num="1">
+            <dia>14-01-2013</dia>
+            
+            <equip juga="local">
+                <nom>Blancs</nom>
+                <resultat>2</resultat>
+                <gols>
+                    <jugador minut="72">Bilis</jugador>
+                    <jugador minut="72">Bilis</jugador>                       
+                </gols>               
+            </equip>
+            
+            <equip juga="visitant">
+                <nom>Verds</nom>
+                <resultat>1</resultat>
+                <gols>
+                    <jugador minut="25">Musti</jugador>                                                                             
+                </gols> 
+            </equip>            
+        </partit>
+        
+        <partit num="2">
+            <dia>15-01-2013</dia>
+            
+            <equip juga="local">
+                <nom>Vermells</nom>
+                <resultat>1</resultat>
+                <gols>
+                    <jugador minut="45">Filomenu</jugador>                       
+                </gols> 
+            </equip>
+            
+            <equip juga="visitant">
+                <nom>Blaus</nom>
+                <resultat>2</resultat>
+                <gols>
+                    <jugador minut="40">Pinxito</jugador>
+                    <jugador minut="75">Bramón</jugador>                       
+                </gols> 
+            </equip>            
+        </partit>
+        
+    </jornada>
+    
+    <jornada num="5">
+                
+        <partit num="1">
+            <dia>21-01-2013</dia>
+            
+            <equip juga="local">
+                <nom>Verds</nom>
+                <resultat>1</resultat>
+                <gols>
+                   <jugador minut="49">Palol</jugador>                    
+                </gols> 
+            </equip>
+            
+            <equip juga="visitant">
+                <nom>Blaus</nom>
+                <resultat>4</resultat>
+                <gols>
+                   <jugador minut="12">Pinxito</jugador>
+                   <jugador minut="33">Pinxito</jugador>
+                   <jugador minut="55">Toni Moco</jugador>
+                   <jugador minut="80">Pinxito</jugador>                   
+                </gols> 
+            </equip>            
+        </partit>
+        
+        <partit num="2">
+            <dia>21-01-2013</dia>
+
+            <equip juga="local">
+                <nom>Vermells</nom>
+                <resultat>1</resultat>
+                <gols>
+                   <jugador minut="81">Filomenu</jugador>                    
+                </gols> 
+            </equip>
+
+            <equip juga="visitant">
+                <nom>Blancs</nom>
+                <resultat>1</resultat>
+                <gols>
+                   <jugador minut="10">Piti</jugador>                    
+                </gols> 
+            </equip>
+        </partit>
+        
+    </jornada>
+    
+    <jornada num="6">
+  
+        <partit num="1">
+            <dia>27-01-2013</dia>
+
+            <equip juga="local">
+                <nom>Vermells</nom>
+                <resultat>5</resultat>
+                <gols>
+                   <jugador minut="3">Filomenu</jugador>
+                   <jugador minut="12">Filomenu</jugador>
+                   <jugador minut="46">Filomenu</jugador>
+                   <jugador minut="69">Manolito</jugador>
+                   <jugador minut="81">Filomenu</jugador>                   
+                </gols> 
+            </equip>
+
+            <equip juga="visitant">
+                <nom>Verds</nom>
+                <resultat>1</resultat>
+                <gols>
+                   <jugador minut="88">Musti</jugador>                    
+                </gols> 
+            </equip>
+        </partit>
+        
+        <partit num="2">
+            <dia>27-01-2013</dia>
+
+            <equip juga="local">
+                <nom>Blancs</nom>
+                <resultat>0</resultat>
+                <gols></gols>               
+            </equip>
+
+            <equip juga="visitant">
+                <nom>Blaus</nom>
+                <resultat>1</resultat>
+                <gols>
+                   <jugador minut="56">Filomenu</jugador>                    
+                </gols> 
+            </equip>
+        </partit>
+        
+    </jornada>
+
+</lliga>
