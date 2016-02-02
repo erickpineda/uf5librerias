@@ -13,6 +13,9 @@ import java.awt.event.ComponentEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -34,7 +37,7 @@ public class Calculadora extends JPanel {
     private JTextField pantalla;
     private JLabel operador;
     private double resultado;
-    private String rutaImg;
+    private URL rutaImg;
     private String operacion;
     private boolean nuevaOperacion = true;
     private static final String[][] BOTONES_CELDAS = {
@@ -92,9 +95,10 @@ public class Calculadora extends JPanel {
     
     private void creaBoton(String[] nombrebotonYCelda) {
         JButton btn = new JButton(nombrebotonYCelda[0]);
+        btn.setName(nombrebotonYCelda[0]);
         btn.setBackground(SystemColor.controlHighlight);
         if (esBotonImagen(btn) && btn.getIcon() != null) {
-            cambiarImagenBoton(btn);
+            cambiarImagenBoton(btn, rutaImg);
         } if (esBotonImagen(btn) && btn.getIcon() == null) {
             btn.setBorder(new TitledBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)), "Imagen", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         }
@@ -103,23 +107,23 @@ public class Calculadora extends JPanel {
     }
     
     private boolean esBotonImagen(JButton btn) {
-        return (btn.getText().equals("img") || btn.getText().equals(""));
+        return (btn.getName().equals("img"));
     }
 
     private void addActions(JButton btn) {
         btn.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent evnt) {
-                if (btn.getText().equals(".")) {
-                    btn.setEnabled(false);
+                if (btn.getName().equals(".")) {
+                    //btn.setEnabled(false);
                 }
                 if ((esBotonImagen(btn) && btn.getIcon() != null) || (esBotonImagen(btn) && btn.getIcon() == null)) {
                     abrirArchivo(btn);
                 } else {
-                    if (esNumero(btn.getText())) {
-                        clicNumero(btn.getText());
+                    if (esNumero(btn.getName())) {
+                        clicNumero(btn.getName());
                     } else {
-                        clicOperacion(btn.getText());
+                        clicOperacion(btn.getName());
                     }
                 }
             }
@@ -199,8 +203,8 @@ public class Calculadora extends JPanel {
         operacion = "";
     }
     
-    private void cambiarImagenBoton(JButton btn) {
-        ImageIcon ii = createImageIcon("/mantis.png", "imagen perfil");
+    private void cambiarImagenBoton(JButton btn, URL ruta) {
+        ImageIcon ii = createImageIcon(ruta, "imagen perfil");
         btn.setIcon(new ImageIcon(getScaledImage(ii.getImage(), 106, 72)));
     }
 
@@ -217,32 +221,41 @@ public class Calculadora extends JPanel {
     
     private void abrirArchivo(JButton btn) {
         JFileChooser fc = new JFileChooser();
-        fc.addChoosableFileFilter(new FileNameExtensionFilter("Imagenes *.png", "png"));
+        fc.addChoosableFileFilter(new FileNameExtensionFilter("Solo *.png *.jpg", "png", "jpg"));
         int returnVal = fc.showOpenDialog(Calculadora.this);
 
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            if (fc.getSelectedFile().getName().endsWith(".png")) {
-                rutaImg = fc.getSelectedFile().getAbsolutePath();
-
-                if (rutaImg.isEmpty()) {
-                    JOptionPane.showMessageDialog(null,
-                            "\nNo se ha encontrado la imagen seleccionada", "¡¡¡ADVERTENCIA!!!",
-                            JOptionPane.WARNING_MESSAGE);
-                } else {
-                    cambiarImagenBoton(btn);
-                }
+            if (fc.getSelectedFile().getName().endsWith(".png")
+                    || fc.getSelectedFile().getName().endsWith(".jpg")) {
+                comprobarImagen(btn, fc.getSelectedFile());
+            } else {
+                mensajeError("El fichero no es correcto\nsolo imagenes png o jpg");
             }
         } else if (returnVal == JFileChooser.CANCEL_OPTION) {
         } else {
         }
     }
 
-    private ImageIcon createImageIcon(String path, String description) {
-        java.net.URL imgURL = getClass().getResource(path);
+    @SuppressWarnings("deprecation")
+    private void comprobarImagen(JButton btn, File file) {
+        try {
+            rutaImg = file.toURL();
+            if (rutaImg.toExternalForm().isEmpty()) {
+                mensajeAdvertencia("\nNo se ha encontrado la imagen seleccionada");
+            } else {
+                cambiarImagenBoton(btn, rutaImg);
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private ImageIcon createImageIcon(URL path, String description) {
+        URL imgURL = path;//getClass().getResource(path);
         if (imgURL != null) {
             return new ImageIcon(imgURL, description);
         } else {
-            System.err.println("Fichero no encontrado: " + path);
+            mensajeError("Fichero no encontrado: " + path);
             return null;
         }
     }
@@ -260,5 +273,12 @@ public class Calculadora extends JPanel {
         g2.drawImage(srcImg, 0, 0, w, h, null);
         g2.dispose();
         return resizedImg;
+    }
+
+    private void mensajeAdvertencia(String msj) {
+        JOptionPane.showMessageDialog(null, msj, "¡¡¡ADVERTENCIA!!!", JOptionPane.WARNING_MESSAGE);
+    }
+    private void mensajeError(String msj) {
+        JOptionPane.showMessageDialog(null, msj, "¡¡¡ERROR!!!", JOptionPane.ERROR_MESSAGE);
     }
 }

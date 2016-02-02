@@ -1,23 +1,34 @@
-package net.erickpineda.calculadora;
+package net.erickpineda.sumamental;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.net.URL;
+import java.text.NumberFormat;
 
 import javax.swing.AbstractAction;
 import javax.swing.ActionMap;
 import javax.swing.ComponentInputMap;
 import javax.swing.InputMap;
 import javax.swing.JComponent;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JLayer;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
+import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.plaf.ActionMapUIResource;
+import javax.swing.plaf.LayerUI;
 
 public class App extends JFrame {
+
+    /**
+     * 
+     */
     private static final long serialVersionUID = 1L;
     private URL icono = getClass().getResource("/mantis.png");
 
@@ -41,20 +52,38 @@ public class App extends JFrame {
      * Create the frame.
      */
     public App() {
-        setIconImage(Toolkit.getDefaultToolkit().getImage(icono));
-        setTitle("Super Calculadora");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 450, 350);
-        getContentPane().setLayout(new BorderLayout(0, 0));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(icono));
+        setTitle("¡¡A Sumar!!");
+        setBounds(100, 100, 450, 320);
 
-        Calculadora calculadora = new Calculadora();
-        getContentPane().add(calculadora, BorderLayout.CENTER);
+        TestSuma test = new TestSuma();
+        getContentPane().add(test, BorderLayout.CENTER);
 
         BarraMenu menuBar = new BarraMenu();
         setJMenuBar(menuBar);
         teclado();
-    }
+        
+        /*
+        Dimension labelSize = new Dimension(80, 20);
+        // A single LayerUI for all the fields.
+        LayerUI<JFormattedTextField> layerUI = new ValidationLayerUI();
+        // Number field.
+        JLabel numberLabel = new JLabel("Number:");
+        numberLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+        numberLabel.setPreferredSize(labelSize);
 
+        NumberFormat numberFormat = NumberFormat.getInstance();
+        JFormattedTextField numberField = new JFormattedTextField(numberFormat);
+        numberField.setColumns(16);
+        numberField.setFocusLostBehavior(JFormattedTextField.PERSIST);
+        numberField.setValue(42);
+
+        JPanel numberPanel = new JPanel();
+        numberPanel.add(numberLabel);
+        numberPanel.add(new JLayer<JFormattedTextField>(numberField, layerUI));
+        getContentPane().add(numberPanel, BorderLayout.SOUTH);*/
+    }
     private void teclado() {
         JPanel p = new JPanel();
         ActionMap actionMap = new ActionMapUIResource();
@@ -73,4 +102,5 @@ public class App extends JFrame {
         SwingUtilities.replaceUIInputMap(p, JComponent.WHEN_IN_FOCUSED_WINDOW, keyMap);
         getRootPane().add(p);
     }
+
 }

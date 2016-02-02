@@ -1,4 +1,4 @@
-package net.erickpineda.calculadora;
+package net.erickpineda.sumamental;
 
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
