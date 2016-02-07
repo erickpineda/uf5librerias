@@ -1,5 +1,6 @@
 package net.erickpineda.sumamental;
 
+import java.awt.Container;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,12 +16,20 @@ public class BarraMenu extends JMenuBar {
     private static final long serialVersionUID = 1L;
     private static final String ICO_SALIR = "/javax/swing/plaf/metal/icons/ocean/close.gif";
     private static final String ICO_ACERCA = "/javax/swing/plaf/basic/icons/JavaCup16.png";
-    private final URL URL_SALIR = getClass().getResource(ICO_SALIR);
-    private final URL URL_ACERCA = getClass().getResource(ICO_ACERCA);
-    private static final String[] MENUS = { "Archivo", "Ventana" };
+    private static final String ICO_REGLAS = "/javax/swing/plaf/metal/icons/ocean/iconify-pressed.gif";
+    private static final String ICO_PREF = "/com/sun/java/swing/plaf/windows/icons/Computer.gif";
+    private static final String[][] BIDI = {
+            { "Archivo", "nuevotest;Nuevo Test", "salir;Salir Ctrl + Q" },
+            { "Ventana", "preferencias;Preferencias" },
+            { "Ayuda", "reglas;Reglas", "acerca;Acerca de" } };
+    private TestMental testMental;
+    private Container contentPane;
+    private URL url;
 
     /**
      * Create the panel.
+     * 
+     * @param testMental
      */
     public BarraMenu() {
         setBackground(SystemColor.window);
@@ -28,38 +37,127 @@ public class BarraMenu extends JMenuBar {
     }
 
     private void crearMenus() {
-        for (int i = 0; i < MENUS.length; i++) {
-            JMenu jm = new JMenu(MENUS[i]);
-            JMenuItem jmI = null;
-            if (i == 0) {
-                jmI = new JMenuItem("Salir Ctrl + Q");
-                jmI.setIcon(new ImageIcon(URL_SALIR));
-            } else {
-                jmI = new JMenuItem("Acerca de");
-                jmI.setIcon(new ImageIcon(URL_ACERCA));
+        for (int fil = 0; fil < BIDI.length; fil++) {
+            JMenu menu = new JMenu(BIDI[fil][0]);
+            for (int col = 1; col < BIDI[fil].length; col++) {
+                menu.add(creaItem(BIDI[fil][col].split(";")));
+                add(menu);
             }
-            addAction(jmI);
-            jmI.setBackground(SystemColor.controlHighlight);
-            jm.add(jmI);
-            add(jm);
         }
     }
 
-    private void addAction(JMenuItem btn) {
-        btn.addActionListener(new ActionListener() {
+    private JMenuItem creaItem(final String[] arr) {
+        JMenuItem item = new JMenuItem(arr[1]);
+        item.setName(arr[0]);
+        item.setBackground(SystemColor.controlHighlight);
+        agregarIconoItem(item);
+        addAction(item);
+        return item;
+    }
+
+    private void agregarIconoItem(final JMenuItem item) {
+        if (item.getName().equals("nuevotest")) {
+            url = getClass().getResource(ICO_REGLAS);
+            item.setIcon(new ImageIcon(url));
+        }
+        if (item.getName().equals("salir")) {
+            url = getClass().getResource(ICO_SALIR);
+            item.setIcon(new ImageIcon(url));
+        }
+        if (item.getName().equals("preferencias")) {
+            url = getClass().getResource(ICO_PREF);
+            item.setIcon(new ImageIcon(url));
+        }
+        if (item.getName().equals("reglas")) {
+            url = getClass().getResource(ICO_REGLAS);
+            item.setIcon(new ImageIcon(url));
+        }
+        if (item.getName().equals("acerca")) {
+            url = getClass().getResource(ICO_ACERCA);
+            item.setIcon(new ImageIcon(url));
+        }
+    }
+
+    private void addAction(JMenuItem item) {
+        item.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent arg0) {
-                if (btn.getText().equals("Salir Ctrl + Q")) {
+                if (item.getName().equals("salir")) {
                     System.exit(0);
                 }
-                if (btn.getText().equals("Acerca de")) {
+                if (item.getName().equals("acerca")) {
                     mensaje("Creado por Erick Pineda Corporation Unlimited");
+                }
+                if (item.getName().equals("reglas")) {
+                    reglas();
+                }
+                if (item.getName().equals("nuevotest")) {
+                    if (testMental == null) {
+                        iniciarTestMental();
+                    } else {
+                        String text = "Se borrará el test actual\nRecuerda leer las reglas en ayuda";
+                        int res = mensaje(text);
+                        if (res == JOptionPane.OK_OPTION) {
+                            contentPane.remove(testMental);
+                            testMental = nuevoTest();
+                            testMental.iniciarConteo();
+                        }
+                        if (res == JOptionPane.CLOSED_OPTION) {
+                        }
+                    }
+                    agregarAlContainer();
                 }
             }
         });
     }
 
-    private void mensaje(String msj) {
-        JOptionPane.showMessageDialog(null, msj, "¡¡¡MENSAJE!!!", JOptionPane.INFORMATION_MESSAGE);
+    private void agregarAlContainer() {
+        if (testMental != null) {
+            contentPane.add(testMental);
+            contentPane.repaint();
+        }
+    }
+
+    public int mensaje(String msj) {
+        return JOptionPane.showConfirmDialog(null, msj, "¡¡¡Mensaje!!!", JOptionPane.PLAIN_MESSAGE);
+    }
+
+    private TestMental nuevoTest() {
+        TestMental test = new TestMental();
+        test.setBackground(SystemColor.textInactiveText);
+        return test;
+    }
+
+    public TestMental getTest() {
+        return testMental;
+    }
+
+    public void iniciarTestMental() {
+        int res = reglas();
+        if (res == JOptionPane.OK_OPTION) {
+            testMental = nuevoTest();
+            testMental.iniciarConteo();
+            agregarAlContainer();
+        }
+        if (res == JOptionPane.CLOSED_OPTION) {
+        }
+    }
+
+    public int reglas() {
+        String msj = "¿Cuántos segundos tardas en acertar "
+                + "las operaciones que aparecen por pantalla?\n\n" + "Son 3 operaciones:\n"
+                + "\t- Suma\n\t- Resta\n\t- Multiplicación\n\n"
+                + "Si no aciertas mostrará incorrecto"
+                + " y no mostrará la siguiente operación\nhasta que sea correcta. "
+                + "Aunque mostrara otro operador.";
+
+        int respuesta = JOptionPane.showConfirmDialog(null, msj, "Reglas",
+                JOptionPane.PLAIN_MESSAGE);
+
+        return respuesta;
+    }
+
+    public void setContainer(Container contentPane) {
+        this.contentPane = contentPane;
     }
 }

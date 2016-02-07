@@ -1,34 +1,28 @@
 package net.erickpineda.sumamental;
 
 import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.awt.EventQueue;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.SystemColor;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.net.URL;
-import java.text.NumberFormat;
 
 import javax.swing.AbstractAction;
 import javax.swing.ActionMap;
 import javax.swing.ComponentInputMap;
 import javax.swing.InputMap;
 import javax.swing.JComponent;
-import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JLayer;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.plaf.ActionMapUIResource;
-import javax.swing.plaf.LayerUI;
 
 public class App extends JFrame {
-
-    /**
-     * 
-     */
     private static final long serialVersionUID = 1L;
     private URL icono = getClass().getResource("/mantis.png");
 
@@ -55,35 +49,31 @@ public class App extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setIconImage(Toolkit.getDefaultToolkit().getImage(icono));
         setTitle("¡¡A Sumar!!");
-        setBounds(100, 100, 450, 320);
-
-        TestSuma test = new TestSuma();
-        getContentPane().add(test, BorderLayout.CENTER);
+        setBounds(400, 100, 450, 350);
+        teclado();
 
         BarraMenu menuBar = new BarraMenu();
+        menuBar.setContainer(getContentPane());
+        menuBar.iniciarTestMental();
         setJMenuBar(menuBar);
-        teclado();
-        
-        /*
-        Dimension labelSize = new Dimension(80, 20);
-        // A single LayerUI for all the fields.
-        LayerUI<JFormattedTextField> layerUI = new ValidationLayerUI();
-        // Number field.
-        JLabel numberLabel = new JLabel("Number:");
-        numberLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-        numberLabel.setPreferredSize(labelSize);
 
-        NumberFormat numberFormat = NumberFormat.getInstance();
-        JFormattedTextField numberField = new JFormattedTextField(numberFormat);
-        numberField.setColumns(16);
-        numberField.setFocusLostBehavior(JFormattedTextField.PERSIST);
-        numberField.setValue(42);
-
-        JPanel numberPanel = new JPanel();
-        numberPanel.add(numberLabel);
-        numberPanel.add(new JLayer<JFormattedTextField>(numberField, layerUI));
-        getContentPane().add(numberPanel, BorderLayout.SOUTH);*/
+        panelSur();
     }
+
+    private void panelSur() {
+        JPanel panel = new JPanel();
+        panel.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 12));
+        panel.setBackground(SystemColor.text);
+        getContentPane().add(panel, BorderLayout.SOUTH);
+        panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+        JLabel informacion = new JLabel("Información");
+        informacion.setFont(new Font("Yu Gothic Light", Font.BOLD, 12));
+        informacion.setHorizontalTextPosition(SwingConstants.CENTER);
+        informacion.setHorizontalAlignment(SwingConstants.CENTER);
+        panel.add(informacion);
+    }
+
     private void teclado() {
         JPanel p = new JPanel();
         ActionMap actionMap = new ActionMapUIResource();
