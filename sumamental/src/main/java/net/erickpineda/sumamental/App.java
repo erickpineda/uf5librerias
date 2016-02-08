@@ -55,6 +55,7 @@ public class App extends JFrame {
         BarraMenu menuBar = new BarraMenu();
         menuBar.setContainer(getContentPane());
         menuBar.iniciarTestMental();
+        menuBar.setLocation(getLocation());
         setJMenuBar(menuBar);
 
         panelSur();
