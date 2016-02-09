@@ -32,14 +32,34 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import net.miginfocom.swing.MigLayout;
 
 public class Calculadora extends JPanel {
-
     private static final long serialVersionUID = 1L;
+    /**
+     * Pantalla que mostrará el resultado según se van pulsando los botones.
+     */
     private JTextField pantalla;
+    /**
+     * Label que mostrará que tipo de operación se está haciendo.
+     */
     private JLabel operador;
+    /**
+     * Resultado de la operacion.
+     */
     private double resultado;
+    /**
+     * URL para la ruta de la imágen de perfil.
+     */
     private URL rutaImg;
+    /**
+     * String que almacena la operación que se está llevando a cabo.
+     */
     private String operacion;
+    /**
+     * Semaforo para controlar si se hará una nueva operación.
+     */
     private boolean nuevaOperacion = true;
+    /**
+     * Array bidimensional que contiene la información del los botones y sus celdas.
+     */
     private static final String[][] BOTONES_CELDAS = {
             { "img;cell 3 0 1 2,grow" },
             { "1;cell 0 2,grow", "2;cell 1 2,grow", "3;cell 2 2,grow", "-;cell 3 2,grow" },
@@ -64,7 +84,9 @@ public class Calculadora extends JPanel {
         crearPantalla();
         crearBotones();
     }
-    
+    /**
+     * Método para crear la pantalla donde irán los resultados.
+     */
     private void crearPantalla() {
         operador = new JLabel();
         operador.setHorizontalTextPosition(SwingConstants.RIGHT);
@@ -84,7 +106,9 @@ public class Calculadora extends JPanel {
         pantalla.setEditable(false);
         add(pantalla, "cell 0 0 3 2,grow");
     }
-    
+    /**
+     * Recorre un array bidimensional para crear los botones de la calculadora.
+     */
     private void crearBotones() {
         for (int i = 0; i < BOTONES_CELDAS.length; i++) {
             for (int j = 0; j < BOTONES_CELDAS[i].length; j++) {
@@ -92,7 +116,10 @@ public class Calculadora extends JPanel {
             }
         }
     }
-    
+    /**
+     * Método para crear los botones.
+     * @param nombrebotonYCelda array que tendrá la información del botón y su celda.
+     */
     private void creaBoton(String[] nombrebotonYCelda) {
         JButton btn = new JButton(nombrebotonYCelda[0]);
         btn.setName(nombrebotonYCelda[0]);
@@ -105,24 +132,31 @@ public class Calculadora extends JPanel {
         addActions(btn);
         add(btn, nombrebotonYCelda[1]);
     }
-    
+    /**
+     * 
+     * @param btn botón a comprobar.
+     * @return retorna true si el botón es el que tiene la imágen de perfil.
+     */
     private boolean esBotonImagen(JButton btn) {
         return (btn.getName().equals("img"));
     }
-
+    /**
+     * Método para agregar las acciones de clic a los botones.
+     * @param btn botón que se le agregará la acción.
+     */
     private void addActions(JButton btn) {
         btn.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent evnt) {
-                if (btn.getName().equals(".")) {
-                    //btn.setEnabled(false);
-                }
                 if ((esBotonImagen(btn) && btn.getIcon() != null) || (esBotonImagen(btn) && btn.getIcon() == null)) {
                     abrirArchivo(btn);
                 } else {
                     if (esNumero(btn.getName())) {
                         clicNumero(btn.getName());
                     } else {
+                        if (btn.getName().equals(".")) {
+                            //btn.setEnabled(false);
+                        }
                         clicOperacion(btn.getName());
                     }
                 }
@@ -145,7 +179,10 @@ public class Calculadora extends JPanel {
             }
         });
     }
-
+    /**
+     * Método para comprobar si el botón es un número.
+     * @param text String a comprobar si el botón pulsado es un número.
+     */
     private void clicNumero(String text) {
         if (pantalla.getText().equals("0") || nuevaOperacion) {
             pantalla.setText(text);
@@ -154,7 +191,10 @@ public class Calculadora extends JPanel {
         }
         nuevaOperacion = false;
     }
-
+    /**
+     * Método que comprueba si el botón pulsado es una operación, para efectuarla a continuación.
+     * @param btn botón a comprobar si es una operación.
+     */
     private void clicOperacion(String btn) {
         if (btn.equals("+") || btn.equals("-")) {
             operador.setText(btn + " ");
@@ -190,7 +230,9 @@ public class Calculadora extends JPanel {
         }
         nuevaOperacion = true;
     }
-
+    /**
+     * Método que crea la operación ya sea suma o resta y la muestra por pantalla.
+     */
     private void calculaResultado() {
         if (operacion.equals("+")) {
             resultado += new Double(pantalla.getText());
@@ -198,16 +240,26 @@ public class Calculadora extends JPanel {
         if (operacion.equals("-")) {
             resultado -= new Double(pantalla.getText());
         }
-
+        if (resultado == (int) 666){
+            mensajeAdvertencia("Ese resultado es cosa del diablo");
+        }
         pantalla.setText("" + resultado);
         operacion = "";
     }
-    
+    /**
+     * 
+     * @param btn botón a cambiar la imágen.
+     * @param ruta ruta de la imágen.
+     */
     private void cambiarImagenBoton(JButton btn, URL ruta) {
         ImageIcon ii = createImageIcon(ruta, "imagen perfil");
         btn.setIcon(new ImageIcon(getScaledImage(ii.getImage(), 106, 72)));
     }
-
+    /**
+     * 
+     * @param s texto para comprobar si es un número.
+     * @return retorna true si el valor introducido es un número.
+     */
     public boolean esNumero(String s) {
         try {
             Integer.parseInt(s);
@@ -218,7 +270,10 @@ public class Calculadora extends JPanel {
         }
         return true;
     }
-    
+    /**
+     * Método que abre el FileChooser, para cambiar la imágen del botón de perfil.
+     * @param btn botón a cambiar la imágen de perfil.
+     */
     private void abrirArchivo(JButton btn) {
         JFileChooser fc = new JFileChooser();
         fc.addChoosableFileFilter(new FileNameExtensionFilter("Solo *.png *.jpg", "png", "jpg"));
@@ -235,7 +290,11 @@ public class Calculadora extends JPanel {
         } else {
         }
     }
-
+    /**
+     * Recibe como parámetro un botón y un fichero para comprobar si la imágen es existente.
+     * @param btn botón con la imaágen.
+     * @param file fichero abierto que será una imágen.
+     */
     @SuppressWarnings("deprecation")
     private void comprobarImagen(JButton btn, File file) {
         try {
@@ -249,7 +308,12 @@ public class Calculadora extends JPanel {
             e.printStackTrace();
         }
     }
-
+    /**
+     * 
+     * @param path ruta de la imágen a cambiar.
+     * @param description descripción de la imágen del botón.
+     * @return retorna una imagen de icono para ponerla en el botón de perfil.
+     */
     private ImageIcon createImageIcon(URL path, String description) {
         URL imgURL = path;//getClass().getResource(path);
         if (imgURL != null) {
@@ -274,10 +338,17 @@ public class Calculadora extends JPanel {
         g2.dispose();
         return resizedImg;
     }
-
+    /**
+     * Muestra mensajes de advertencia.
+     * @param msj mensaje a mostrar.
+     */
     private void mensajeAdvertencia(String msj) {
         JOptionPane.showMessageDialog(null, msj, "¡¡¡ADVERTENCIA!!!", JOptionPane.WARNING_MESSAGE);
     }
+    /**
+     * Muestra mensajes de error.
+     * @param msj mensaje a mostrar.
+     */
     private void mensajeError(String msj) {
         JOptionPane.showMessageDialog(null, msj, "¡¡¡ERROR!!!", JOptionPane.ERROR_MESSAGE);
     }

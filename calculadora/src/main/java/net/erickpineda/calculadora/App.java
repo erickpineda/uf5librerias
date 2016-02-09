@@ -54,7 +54,9 @@ public class App extends JFrame {
         setJMenuBar(menuBar);
         teclado();
     }
-
+    /**
+     * Atajos de teclado.
+     */
     private void teclado() {
         JPanel p = new JPanel();
         ActionMap actionMap = new ActionMapUIResource();

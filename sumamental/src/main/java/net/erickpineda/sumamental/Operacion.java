@@ -49,9 +49,6 @@ public class Operacion {
             return (r == multiplicar());
         }
     }
-    public static int rand(int desde, int hasta) {
-        return (int) (Math.random() * (hasta - desde + 1) + desde);
-    }
 
     public int getN1() {
         return n1;

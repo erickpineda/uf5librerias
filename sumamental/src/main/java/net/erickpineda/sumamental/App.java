@@ -60,7 +60,9 @@ public class App extends JFrame {
 
         panelSur();
     }
-
+    /**
+     * Panel de información.
+     */
     private void panelSur() {
         JPanel panel = new JPanel();
         panel.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 12));
@@ -74,7 +76,9 @@ public class App extends JFrame {
         informacion.setHorizontalAlignment(SwingConstants.CENTER);
         panel.add(informacion);
     }
-
+    /**
+     * Atajos del teclado.
+     */
     private void teclado() {
         JPanel p = new JPanel();
         ActionMap actionMap = new ActionMapUIResource();

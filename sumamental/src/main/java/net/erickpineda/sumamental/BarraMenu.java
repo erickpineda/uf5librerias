@@ -18,6 +18,7 @@ public class BarraMenu extends JMenuBar {
     private static final String ICO_ACERCA = "/javax/swing/plaf/basic/icons/JavaCup16.png";
     private static final String ICO_REGLAS = "/javax/swing/plaf/metal/icons/ocean/iconify-pressed.gif";
     private static final String ICO_PREF = "/com/sun/java/swing/plaf/windows/icons/Computer.gif";
+    private static final String ICO_HIST = "/com/sun/javafx/scene/control/skin/modena/HTMLEditor-Bullets.png";
     private TestMental testMental;
     private Container contentPane;
     private URL url;
@@ -26,6 +27,7 @@ public class BarraMenu extends JMenuBar {
      */
     private static final String[][] BIDI = {
             { "Archivo", "nuevotest;Nuevo Test", "salir;Salir Ctrl + Q" },
+            { "Ver", "historial;Historial" },
             { "Ventana", "preferencias;Preferencias" },
             { "Ayuda", "reglas;Reglas", "acerca;Acerca de" } };
 
@@ -74,6 +76,10 @@ public class BarraMenu extends JMenuBar {
             url = getClass().getResource(ICO_SALIR);
             item.setIcon(new ImageIcon(url));
         }
+        if (item.getName().equals("historial")) {
+            url = getClass().getResource(ICO_HIST);
+            item.setIcon(new ImageIcon(url));
+        }
         if (item.getName().equals("preferencias")) {
             url = getClass().getResource(ICO_PREF);
             item.setIcon(new ImageIcon(url));
@@ -103,6 +109,12 @@ public class BarraMenu extends JMenuBar {
                 }
                 if (item.getName().equals("reglas")) {
                     reglas();
+                }
+                if (item.getName().equals("historial")) {
+                    mensaje("Sin implementar");
+                }
+                if (item.getName().equals("preferencias")) {
+                    mensaje("Sin implementar");
                 }
                 if (item.getName().equals("nuevotest")) {
                     if (testMental == null) {

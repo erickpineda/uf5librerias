@@ -26,7 +26,9 @@ public class BarraMenu extends JMenuBar {
         setBackground(SystemColor.window);
         crearMenus();
     }
-
+    /**
+     * Recorre un array bidimensional para crear los items o submenús de los distintos apartados.
+     */
     private void crearMenus() {
         for (int i = 0; i < MENUS.length; i++) {
             JMenu jm = new JMenu(MENUS[i]);
@@ -34,9 +36,11 @@ public class BarraMenu extends JMenuBar {
             if (i == 0) {
                 jmI = new JMenuItem("Salir Ctrl + Q");
                 jmI.setIcon(new ImageIcon(URL_SALIR));
+                jmI.setName("salir");
             } else {
                 jmI = new JMenuItem("Acerca de");
                 jmI.setIcon(new ImageIcon(URL_ACERCA));
+                jmI.setName("acerca");
             }
             addAction(jmI);
             jmI.setBackground(SystemColor.controlHighlight);
@@ -44,21 +48,27 @@ public class BarraMenu extends JMenuBar {
             add(jm);
         }
     }
-
-    private void addAction(JMenuItem btn) {
-        btn.addActionListener(new ActionListener() {
+    /**
+     * Agrega una acción de teclado al item del menú.
+     * @param item item del menú para agregar la acción.
+     */
+    private void addAction(JMenuItem item) {
+        item.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent arg0) {
-                if (btn.getText().equals("Salir Ctrl + Q")) {
+                if (item.getName().equals("salir")) {
                     System.exit(0);
                 }
-                if (btn.getText().equals("Acerca de")) {
+                if (item.getName().equals("acerca")) {
                     mensaje("Creado por Erick Pineda Corporation Unlimited");
                 }
             }
         });
     }
-
+    /**
+     * Muestra mensajes por pantalla en un JOptionPane.
+     * @param msj mensaje a mostrar.
+     */
     private void mensaje(String msj) {
         JOptionPane.showMessageDialog(null, msj, "¡¡¡MENSAJE!!!", JOptionPane.INFORMATION_MESSAGE);
     }
