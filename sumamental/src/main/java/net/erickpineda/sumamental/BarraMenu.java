@@ -1,24 +1,39 @@
 package net.erickpineda.sumamental;
 
+import java.awt.BorderLayout;
 import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
 
+import javax.swing.AbstractAction;
+import javax.swing.ActionMap;
+import javax.swing.ComponentInputMap;
 import javax.swing.ImageIcon;
+import javax.swing.InputMap;
+import javax.swing.JComponent;
+import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.KeyStroke;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import javax.swing.plaf.ActionMapUIResource;
 
 public class BarraMenu extends JMenuBar {
     private static final long serialVersionUID = 1L;
-    private static final String ICO_SALIR = "/javax/swing/plaf/metal/icons/ocean/close.gif";
-    private static final String ICO_ACERCA = "/javax/swing/plaf/basic/icons/JavaCup16.png";
-    private static final String ICO_REGLAS = "/javax/swing/plaf/metal/icons/ocean/iconify-pressed.gif";
-    private static final String ICO_PREF = "/com/sun/java/swing/plaf/windows/icons/Computer.gif";
-    private static final String ICO_HIST = "/com/sun/javafx/scene/control/skin/modena/HTMLEditor-Bullets.png";
+    private static final String ICO_SALIR = "/16x16-icons/gif/16x16/Exit.gif";
+    private static final String ICO_NUEVO = "/16x16-icons/gif/16x16/Create.gif";
+    private static final String ICO_ACERCA = "/16x16-icons/gif/16x16/Help book.gif";
+    private static final String ICO_REGLAS = "/16x16-icons/gif/16x16/Text.gif";
+    private static final String ICO_PREF = "/16x16-icons/gif/16x16/Display 16x16.gif";
+    private static final String ICO_HIST = "/16x16-icons/gif/16x16/Report.gif";
     private TestMental testMental;
     private Container contentPane;
     private URL url;
@@ -34,9 +49,12 @@ public class BarraMenu extends JMenuBar {
     /**
      * Create the panel.
      */
-    public BarraMenu() {
+    public BarraMenu(Container cont) {
+        setContainer(cont);
         setBackground(SystemColor.window);
         crearMenus();
+        teclado();
+        panelSur();
     }
     /**
      * Recorre un array bidimensional para crear los diferentes menus.
@@ -69,7 +87,7 @@ public class BarraMenu extends JMenuBar {
      */
     private void agregarIconoItem(final JMenuItem item) {
         if (item.getName().equals("nuevotest")) {
-            url = getClass().getResource(ICO_REGLAS);
+            url = getClass().getResource(ICO_NUEVO);
             item.setIcon(new ImageIcon(url));
         }
         if (item.getName().equals("salir")) {
@@ -195,11 +213,61 @@ public class BarraMenu extends JMenuBar {
 
         return respuesta;
     }
+
     /**
      * 
-     * @param contentPane container del frame.
+     * @param contentPane
+     *            container del frame.
      */
     public void setContainer(Container contentPane) {
         this.contentPane = contentPane;
+    }
+
+    /**
+     * Panel de información.
+     */
+    private void panelSur() {
+        JPanel panel = new JPanel();
+        panel.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 12));
+        panel.setBackground(SystemColor.text);
+        contentPane.add(panel, BorderLayout.SOUTH);
+        panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+        JLabel informacion = new JLabel("Información");
+        informacion.setFont(new Font("Yu Gothic Light", Font.BOLD, 12));
+        informacion.setHorizontalTextPosition(SwingConstants.CENTER);
+        informacion.setHorizontalAlignment(SwingConstants.CENTER);
+        panel.add(informacion);
+    }
+
+    /**
+     * Atajos del teclado.
+     */
+    private void teclado() {
+        JPanel p = new JPanel();
+        ActionMap actionMap = new ActionMapUIResource();
+        actionMap.put("action_exit", new AbstractAction() {
+            private static final long serialVersionUID = 1L;
+
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+        actionMap.put("action_reglas", new AbstractAction() {
+            private static final long serialVersionUID = 1L;
+
+            public void actionPerformed(ActionEvent e) {
+                reglas();
+            }
+        });
+        InputMap keyMap = new ComponentInputMap(p);
+        keyMap.put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.Event.CTRL_MASK),
+                "action_exit");
+        keyMap.put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.Event.CTRL_MASK),
+                "action_reglas");
+
+        SwingUtilities.replaceUIActionMap(p, actionMap);
+        SwingUtilities.replaceUIInputMap(p, JComponent.WHEN_IN_FOCUSED_WINDOW, keyMap);
+        contentPane.add(p);
     }
 }
