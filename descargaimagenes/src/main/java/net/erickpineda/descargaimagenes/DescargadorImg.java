@@ -23,11 +23,29 @@ import net.miginfocom.swing.MigLayout;
 public class DescargadorImg extends JPanel implements ChangeListener {
 
   private static final long serialVersionUID = 1L;
+  /**
+   * Recoge la URL para proceder la descarga.
+   */
   private JTextField url;
+  /**
+   * Opción para descargar una única imágen.
+   */
   private JRadioButton imagenUnica;
+  /**
+   * Opción para descargar varias imágenes de una URL.
+   */
   private JRadioButton variasImagenes;
+  /**
+   * Container donde ira el JList con los nombres de imágenes.
+   */
   private JScrollPane scrollPane;
+  /**
+   * Para almacenar los nombres de las imágenes.
+   */
   private JList<String> list;
+  /**
+   * Modelo que se le pasará a la lista de nombres de imágenes.
+   */
   private DefaultListModel<String> model;
 
   /**
@@ -68,6 +86,11 @@ public class DescargadorImg extends JPanel implements ChangeListener {
 
   }
 
+  /**
+   * Agrega acciones al botón.
+   * 
+   * @param btn botón a agregar la acción cuando se hace clic sobre el.
+   */
   private void addAction(JButton btn) {
     btn.addActionListener(new ActionListener() {
 
@@ -94,6 +117,12 @@ public class DescargadorImg extends JPanel implements ChangeListener {
     }
   }
 
+  /**
+   * Método que comprueba si la URL introducida es correcta y según la opción de descarga se
+   * procederá a descargar la imágen o imágenes.
+   * 
+   * @param cu conector de URL para descargar la imágen o imágenes.
+   */
   private void comprobarUrlYOpcionDeDescarga(final ConectorURL cu) {
     if (imagenUnica.isSelected()) {
       if (Util.validarURLImagen(url.getText())) {
@@ -115,14 +144,16 @@ public class DescargadorImg extends JPanel implements ChangeListener {
     }
   }
 
+  /**
+   * Comprueba si la imágen o las imágenes se han podido descargar correctamente.
+   * 
+   * @param cu parámetro conector.
+   */
   private void validarDescarga(final ConectorURL cu) {
     if (!cu.isImgOK()) {
       mensajeError("Por algún motivo la descarga de\nimágen no se ha podido efectuar");
     } else {
-      model.clear();
-      leerImagenesEnDirectorio();
-      list.setModel(model);
-      url.setText("");
+      actualizarModelo();
       mensajeInfo("Descarga correcta");
     }
   }
@@ -137,6 +168,19 @@ public class DescargadorImg extends JPanel implements ChangeListener {
     }
   }
 
+  /**
+   * Actualiza con nuevos datos la lista de imágenes.
+   */
+  private void actualizarModelo() {
+    model.clear();
+    leerImagenesEnDirectorio();
+    list.setModel(model);
+    url.setText("");
+  }
+
+  /**
+   * Método que comprueba un directorio y busca los ficheros que sean de tipo imagen
+   */
   private void leerImagenesEnDirectorio() {
     try {
       Files.walk(Paths.get("img")).forEach(filePath -> {
@@ -149,14 +193,29 @@ public class DescargadorImg extends JPanel implements ChangeListener {
     }
   }
 
+  /**
+   * Mostrar mensajes de error.
+   * 
+   * @param msj mensaje a mostrar.
+   */
   private void mensajeError(String msj) {
     JOptionPane.showMessageDialog(null, msj, "Error", JOptionPane.ERROR_MESSAGE);
   }
 
+  /**
+   * Mostrar mensajes de advertencia.
+   * 
+   * @param msj mensaje a mostrar.
+   */
   private void mensajeAdvertencia(String msj) {
     JOptionPane.showMessageDialog(null, msj, "Advertencia", JOptionPane.WARNING_MESSAGE);
   }
 
+  /**
+   * Mostrar mensajes de información.
+   * 
+   * @param msj mensaje a mostrar.
+   */
   private void mensajeInfo(String msj) {
     JOptionPane.showMessageDialog(null, msj, "Información", JOptionPane.INFORMATION_MESSAGE);
   }

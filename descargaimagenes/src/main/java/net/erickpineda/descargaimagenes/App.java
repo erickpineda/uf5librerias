@@ -41,6 +41,9 @@ public class App extends JFrame {
     crearDescargadorImagen();
   }
 
+  /**
+   * Contenido principal del programa.
+   */
   private void contentPanelPrincipal() {
     contentPane = new JPanel();
     contentPane.setBorder(new CompoundBorder(
@@ -53,9 +56,11 @@ public class App extends JFrame {
         new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0))));
     contentPane.setLayout(new BorderLayout(0, 0));
     setContentPane(contentPane);
-
   }
 
+  /**
+   * Crea el JPanel de la clase {@code DescargadorImg()} para ejecutar el programa.
+   */
   private void crearDescargadorImagen() {
     JPanel di = new DescargadorImg();
     contentPane.add(di, BorderLayout.CENTER);

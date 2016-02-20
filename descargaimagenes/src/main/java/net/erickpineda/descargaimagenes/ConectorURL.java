@@ -14,8 +14,17 @@ import org.jsoup.select.Elements;
 import org.jsoup.Jsoup;
 
 public class ConectorURL {
+  /**
+   * URL para proceder la descarga.
+   */
   private String URL_IMG;
+  /**
+   * Carpeta donde se leeran y descargaran todas la imágenes.
+   */
   private static final String CARPETA = "img";
+  /**
+   * Semaforo que comprobara si la imágen o imágenes se han descargado correctamente.
+   */
   private boolean imgOK = true;
 
   public ConectorURL() {
@@ -94,14 +103,26 @@ public class ConectorURL {
     return imgPath.substring(index, imgPath.length());
   }
 
+  /**
+   * 
+   * @param url URL a cambiar.
+   */
   public void setURL_IMG(String url) {
     this.URL_IMG = url;
   }
 
+  /**
+   * 
+   * @return true si la imágen se ha descargado correctamente.
+   */
   public boolean isImgOK() {
     return imgOK;
   }
 
+  /**
+   * 
+   * @param imgOK cambia true o false según la imagen se haya descagado correctamente.
+   */
   public void setImgOK(boolean imgOK) {
     this.imgOK = imgOK;
   }
