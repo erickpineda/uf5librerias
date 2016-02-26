@@ -19,6 +19,7 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import net.miginfocom.swing.MigLayout;
+import java.awt.SystemColor;
 
 public class DescargadorImg extends JPanel implements ChangeListener {
 
@@ -52,6 +53,7 @@ public class DescargadorImg extends JPanel implements ChangeListener {
    * Create the panel.
    */
   public DescargadorImg() {
+    setBackground(SystemColor.menu);
     model = new DefaultListModel<String>();
     setLayout(new MigLayout("", "[][][grow][][]", "[][][][][][grow][]"));
 
@@ -71,6 +73,7 @@ public class DescargadorImg extends JPanel implements ChangeListener {
     add(variasImagenes, "cell 3 2,alignx trailing");
 
     JButton descargar = new JButton("Descargar");
+    descargar.setBackground(SystemColor.controlHighlight);
     addAction(descargar);
     add(descargar, "cell 3 2,alignx trailing");
 

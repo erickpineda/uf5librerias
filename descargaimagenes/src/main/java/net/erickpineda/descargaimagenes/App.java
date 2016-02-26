@@ -3,6 +3,8 @@ package net.erickpineda.descargaimagenes;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Toolkit;
+import java.net.URL;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -13,6 +15,7 @@ import javax.swing.border.TitledBorder;
 
 public class App extends JFrame {
   private static final long serialVersionUID = 1L;
+  private URL icono = getClass().getResource("/mantis.png");
   private JPanel contentPane;
 
   /**
@@ -35,7 +38,9 @@ public class App extends JFrame {
    * Create the frame.
    */
   public App() {
+    setTitle("Descargador de imágenes");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setIconImage(Toolkit.getDefaultToolkit().getImage(icono));
     setBounds(400, 150, 550, 300);
     contentPanelPrincipal();
     crearDescargadorImagen();
