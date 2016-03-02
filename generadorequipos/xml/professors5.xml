@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<professors>
+    <professor>
+        <nom>Mireia</nom>
+        <cognom>Martí</cognom>
+        <sexe>Dona</sexe>
+        <edat>32</edat>
+    </professor>
+    <professor>
+        <nom>Maria</nom>
+        <cognom>Gallego</cognom>
+        <sexe>Dona</sexe>
+        <edat>41</edat>
+    </professor>
+        <professor>
+        <nom>Marta</nom>
+        <cognom>Bonany</cognom>
+        <sexe>Dona</sexe>
+        <edat>29</edat>
+    </professor>
+    <professor>
+        <nom>Francesc</nom>
+        <cognom>Canet</cognom>
+        <sexe>Home</sexe>
+        <edat>62</edat>
+    </professor>    
+</professors>
+

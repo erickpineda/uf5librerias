@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<professors>
+    <professor>
+        <nom>Mireia</nom>
+        <cognom>Martí</cognom>
+        <sexe>Dona</sexe>
+        <edat>32</edat>
+    </professor>
+    <professor>
+        <nom>Pol</nom>
+        <cognom>Reig</cognom>
+        <sexe>Home</sexe>
+        <edat>59</edat>
+    </professor>
+</professors>
+

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -37,7 +38,10 @@
             <TextField fx:id="coordinacion" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="8" />
             <TextField fx:id="secretario" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
             <ListView fx:id="jefeEstudios" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.rowSpan="3" />
-            <Button fx:id="recalcular" mnemonicParsing="false" onMouseClicked="#btnRecalcular" text="Recalcular" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+            <Button fx:id="recalcular" mnemonicParsing="false" onMouseClicked="#btnRecalcular" text="Recalcular" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
+               <effect>
+                  <Blend mode="HARD_LIGHT" />
+               </effect></Button>
          </children>
       </GridPane>
    </center>
