@@ -1,8 +1,13 @@
 package net.erickpineda.generadorequipos.utils;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import javax.xml.stream.FactoryConfigurationError;
+import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
@@ -14,11 +19,23 @@ public class LeerXML {
    */
   private XMLStreamReader parser;
   private Set<Profesor> profesores;
+  private File ficheroXML;
   private Profesor profe;
 
-  public LeerXML(final XMLStreamReader parser) {
-    this.parser = parser;
+  public LeerXML(final File f) {
+    this.ficheroXML = f;
     this.profesores = new LinkedHashSet<Profesor>();
+  }
+
+  public LeerXML crearInstancia() {
+    try {
+      InputStream entrada = ficheroXML.toURI().toURL().openStream();
+      parser = XMLInputFactory.newInstance().createXMLStreamReader(entrada);
+
+    } catch (XMLStreamException | FactoryConfigurationError | IOException e) {
+      e.printStackTrace();
+    }
+    return this;
   }
 
   public void procesarXML() {

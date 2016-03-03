@@ -11,7 +11,6 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import net.erickpineda.generadorequipos.models.Profesor;
-import net.erickpineda.generadorequipos.utils.Msj;
 import net.erickpineda.generadorequipos.utils.Util;
 
 public class ContenidoController {
@@ -34,9 +33,11 @@ public class ContenidoController {
 
   @FXML
   public void btnRecalcular(MouseEvent event) {
-    borrarTodosLosCampos();
-    distribuirPersonal(crearAPartirDeListaOriginal(listaOriginalProfesores));
-    todosLosCamposComoEditables(true);
+    if (hayDatos()) {
+      borrarTodosLosCampos();
+      distribuirPersonal(crearAPartirDeListaOriginal(listaOriginalProfesores));
+      todosLosCamposComoEditables(true);
+    }
   }
 
   /**
@@ -44,17 +45,14 @@ public class ContenidoController {
    * {@link Profesor} rellenar los campos del controlador.
    */
   public void agregarPersonas() {
+    borrarTodosLosCampos();
     Set<Profesor> listaTemporalProfesores = crearAPartirDeListaOriginal(listaOriginalProfesores);
-    if (listaTemporalProfesores.size() >= 3) {
-      if (hayMujeresYHombres(listaTemporalProfesores)) {
-        distribuirPersonal(listaTemporalProfesores);
-        todosLosCamposComoEditables(false);
-      } else {
-        Msj.warning("Alerta", "Igualdad de género", "Deben existir hombres y mujeres");
-      }
-    } else {
-      Msj.error("Error", "Personal insuficiente", "Personal insuficiente para crear el equipo");
-    }
+    distribuirPersonal(listaTemporalProfesores);
+    todosLosCamposComoEditables(false);
+  }
+
+  public boolean hayDatos() {
+    return (listaOriginalProfesores != null && !listaOriginalProfesores.isEmpty());
   }
 
   /**
@@ -100,7 +98,7 @@ public class ContenidoController {
    * @param profesores conjunto de profesores para comprobar.
    * @return retorna true si hay tanto mujeres como hombres de lo contrario retorna false.
    */
-  private boolean hayMujeresYHombres(final Set<Profesor> profesores) {
+  public boolean hayMujeresYHombres(final Set<Profesor> profesores) {
     int mujeres = 0, hombres = 0;
     for (Profesor p : profesores) {
       if (p.getSexo().equalsIgnoreCase("Dona")) {
@@ -137,7 +135,7 @@ public class ContenidoController {
    * 
    * @param valor booleano que servirá para indicar si los campos serán o no editables.
    */
-  public void todosLosCamposComoEditables(boolean valor) {
+  public void todosLosCamposComoEditables(final boolean valor) {
     director.setEditable(valor);
     coordinacion.setEditable(valor);
     secretario.setEditable(valor);

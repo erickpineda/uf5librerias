@@ -1,14 +1,6 @@
 package net.erickpineda.generadorequipos.controllers;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-
-import javax.xml.stream.FactoryConfigurationError;
-import javax.xml.stream.XMLInputFactory;
-import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.XMLStreamReader;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -18,6 +10,7 @@ import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
+import net.erickpineda.generadorequipos.App;
 import net.erickpineda.generadorequipos.utils.CrearXML;
 import net.erickpineda.generadorequipos.utils.LeerXML;
 import net.erickpineda.generadorequipos.utils.Msj;
@@ -64,6 +57,7 @@ public class RootController {
     ExtensionFilter soloTXT = new ExtensionFilter("Solo ficheros XML (*.xml)", "*.xml");
     fileChooser.getExtensionFilters().add(soloTXT);
     fileChooser.setInitialDirectory(new File("."));
+    setMyStage(App.PRIMARY_STAGE);
     return fileChooser;
   }
 
@@ -74,7 +68,6 @@ public class RootController {
     File xml = getFileChooser("Abrir un fichero XML").showOpenDialog(myStage);
     if (xml != null) {
       procesarXML(xml);
-      myStage.setTitle("¡Generador Equipos! - " + xml.toURI().toString());
     }
   }
 
@@ -82,7 +75,7 @@ public class RootController {
    * Método para abrir un FileChooser que permite guardar un fichero.
    */
   private void guardarFichero() {
-    if (contenidoController.nuevoEquipo() != null) {
+    if (contenidoController.hayDatos()) {
       File xml = getFileChooser("Guardar un fichero XML").showSaveDialog(myStage);
       if (xml != null) {
         CrearXML crear = new CrearXML(xml.getAbsolutePath(), contenidoController.nuevoEquipo());
@@ -101,19 +94,22 @@ public class RootController {
    * @param f fichero XML al que se le extraeran los datos para ser almacenados en una lista.
    */
   private void procesarXML(final File f) {
-    try {
-      InputStream entrada = f.toURI().toURL().openStream();
-      XMLStreamReader parser = XMLInputFactory.newInstance().createXMLStreamReader(entrada);
-      LeerXML pro = new LeerXML(parser);
-      pro.procesarXML();
-      contenidoController.setProfesores(pro.getProfesores());
-      contenidoController.agregarPersonas();
-    } catch (XMLStreamException | FactoryConfigurationError e) {
-      e.printStackTrace();
-    } catch (MalformedURLException e) {
-      e.printStackTrace();
-    } catch (IOException e) {
-      e.printStackTrace();
+    LeerXML pro = new LeerXML(f).crearInstancia();
+    pro.procesarXML();
+    if (pro.getProfesores() != null && !pro.getProfesores().isEmpty()) {
+      if (pro.getProfesores().size() > 2) {
+        if (contenidoController.hayMujeresYHombres(pro.getProfesores())) {
+          contenidoController.setProfesores(pro.getProfesores());
+          contenidoController.agregarPersonas();
+          myStage.setTitle("¡Generador Equipos! - " + f.toURI().toString());
+        } else {
+          Msj.warning("Alerta", "Igualdad de género", "Deben existir hombres y mujeres");
+        }
+      } else {
+        Msj.warning("Warning", "Falta personal", "Personal insuficiente para procesar los datos");
+      }
+    } else {
+      Msj.warning("Warning", "Fichero procesado", "El fichero no tiene información válida");
     }
   }
 

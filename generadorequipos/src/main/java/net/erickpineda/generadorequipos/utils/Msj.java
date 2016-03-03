@@ -22,7 +22,7 @@ public class Msj {
     alert.setHeaderText(header);
     alert.setContentText(content);
     Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
-    stage.getIcons().add(new Image(Msj.class.getResource("../content/images/mantis.png").toExternalForm()));
+    stage.getIcons().add(new Image(Msj.class.getResource("/img/mantis.png").toExternalForm()));
     alert.showAndWait();
   }
 
@@ -32,7 +32,7 @@ public class Msj {
     alert.setHeaderText(header);
     alert.setContentText(content);
     Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
-    stage.getIcons().add(new Image(Msj.class.getResource("../content/images/mantis.png").toExternalForm()));
+    stage.getIcons().add(new Image(Msj.class.getResource("/img/mantis.png").toExternalForm()));
     alert.showAndWait();
   }
 
@@ -42,7 +42,7 @@ public class Msj {
     alert.setHeaderText(header);
     alert.setContentText(content);
     Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
-    stage.getIcons().add(new Image(Msj.class.getResource("../content/images/mantis.png").toExternalForm()));
+    stage.getIcons().add(new Image(Msj.class.getResource("/img/mantis.png").toExternalForm()));
     alert.showAndWait();
   }
 
@@ -52,7 +52,7 @@ public class Msj {
     alert.setHeaderText(header);
     alert.setContentText(content);
     Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
-    stage.getIcons().add(new Image(Msj.class.getResource("../content/images/mantis.png").toExternalForm()));
+    stage.getIcons().add(new Image(Msj.class.getResource("/img/mantis.png").toExternalForm()));
     return alert.showAndWait();
   }
 }
