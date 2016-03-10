@@ -1,0 +1,47 @@
+.root {
+	-fx-background-image: url("../img/bg.png");
+	-fx-font-family: Arial;
+}
+
+.hboxContainer {
+	-fx-background-color: #FAFAFA;
+  	-fx-effect: dropshadow(three-pass-box, grey, 5.0, 0.0, 0.0, 0.0);
+    -fx-background-radius: 5.0;
+}
+#vbox {
+    -fx-border-width: 1.0px;
+    -fx-background-color: white;
+    -fx-background-radius: 3.0;
+    -fx-effect: dropshadow(three-pass-box, grey, 2.0, 0.0, 0.0, 1.0);
+}
+
+VBox,
+TextField,
+ListView {
+	-fx-background-color: whitesmoke;
+	-fx-border-color: lavender;
+}
+
+VBox:hover,
+TextField:hover,
+ListView:hover {
+	-fx-border-width: 1.0px;
+	-fx-border-color: #CECEEA;
+    -fx-background-color: white;/*#FAFAFA */
+    -fx-background-radius: 3.0;
+    -fx-effect: dropshadow(three-pass-box, grey, 1.0, 0.0, 0.0, 0.0);
+}
+
+Button:hover{
+	-fx-effect: dropshadow(three-pass-box, grey, 0.0, 0.0, 0.0, 0.0);
+}
+
+/*
+#leerFichero,
+#guardar,
+#recalcular {
+    -fx-border-width: 2.0;
+    -fx-background-radius: 0.0;
+    -fx-background-insets: 0.0 0.0 0.0 0.0, 0.0, 1.0, 2.0;
+    
+} */
