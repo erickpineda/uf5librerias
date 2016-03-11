@@ -12,21 +12,21 @@ import javax.xml.stream.XMLStreamReader;
  *
  */
 public class App {
-    private static final String NOMBRE_FICHERO = "/golejadors.xml";
+  private static final String NOMBRE_FICHERO = "/golejadors.xml";
 
-    public static void main(String[] args) {
-        new App().inicio();
+  public static void main(String[] args) {
+    new App().inicio();
+  }
+
+  private void inicio() {
+    try {
+      InputStream entrada = App.class.getResourceAsStream(NOMBRE_FICHERO);
+      XMLStreamReader parser = XMLInputFactory.newInstance().createXMLStreamReader(entrada);
+      new Procesar(parser).procesarXML();
+    } catch (XMLStreamException | FactoryConfigurationError e) {
+      e.printStackTrace();
     }
 
-    private void inicio() {
-        try {
-            InputStream entrada = App.class.getResourceAsStream(NOMBRE_FICHERO);
-            XMLStreamReader parser = XMLInputFactory.newInstance().createXMLStreamReader(entrada);
-            new Procesar(parser).procesarXML();
-        } catch (XMLStreamException | FactoryConfigurationError e) {
-            e.printStackTrace();
-        }
-
-    }
+  }
 
 }

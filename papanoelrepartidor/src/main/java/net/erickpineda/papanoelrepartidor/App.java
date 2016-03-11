@@ -5,9 +5,9 @@ package net.erickpineda.papanoelrepartidor;
  *
  */
 public class App {
-    public static void main(String[] args) {
-        SanNicolasRepartidor sanNicolas = new SanNicolasRepartidor().alistarRutas();
-        sanNicolas.hohoho();
-        sanNicolas.trabajoCompletado();
-    }
+  public static void main(String[] args) {
+    SanNicolasRepartidor sanNicolas = new SanNicolasRepartidor().alistarRutas();
+    sanNicolas.hohoho();
+    sanNicolas.trabajoCompletado();
+  }
 }

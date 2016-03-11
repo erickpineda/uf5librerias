@@ -6,9 +6,9 @@ package net.erickpineda.papanoelconlapatarota;
  */
 public class App {
 
-    public static void main(String[] args) {
-        SustitutoDeSanta sustituto = new SustitutoDeSanta().alistarRutas();
-        sustituto.hohoho();
-        sustituto.trabajoCompletado();
-    }
+  public static void main(String[] args) {
+    SustitutoDeSanta sustituto = new SustitutoDeSanta().alistarRutas();
+    sustituto.hohoho();
+    sustituto.trabajoCompletado();
+  }
 }
